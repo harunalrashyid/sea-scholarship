@@ -1,0 +1,32 @@
+.Footer {
+    & {
+        text-align: center;
+        font-size: .875rem;
+        color: $white;
+        position: relative;
+        padding: 1rem 0;
+    }
+    
+    & a {
+        color: $white;
+    }
+    
+    &__overlay {
+        position: absolute;
+        bottom: 0;
+    }
+
+    &__overlay img {
+        position: relative;
+        bottom: -8px;
+    }
+}
+
+@media (max-width: $sm) {
+    .Footer {
+        &__overlay img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

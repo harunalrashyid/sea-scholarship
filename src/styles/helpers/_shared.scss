@@ -1,0 +1,40 @@
+%column {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+%column-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+%column-8 {
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+}
+
+%column-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+%column-4 {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+}
+
+%title {
+    font-size: 2rem;
+    color: $primary;
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+}
+
+%imgOverlay {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+}

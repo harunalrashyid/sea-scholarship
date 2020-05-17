@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f6f6f6;
+    font-family: 'Avenir-Roman';
+    font-size: 16px;
+    color: $gray;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    letter-spacing: .8px;
+}
+
+h1, h2, h3, h4, h5 ,h6 {
+    font-family: 'Avenir-Black';
+}
+
+section {
+    padding: 100px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.flickity-page-dots {
+    display: none;
+}
+
+@media (max-width: $sm) {
+    section {
+        padding: 50px 0;
+    }
+}
