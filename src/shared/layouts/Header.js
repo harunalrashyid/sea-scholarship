@@ -30,7 +30,7 @@ const Header = props => {
                             </ul>
                         </div>
                     </div>
-                    <div className="Header__nav-toggle">
+                    <div className="Header__nav-toggle" onClick={() => console.log('clicked')}>
                         <span className="Header__nav-toggle-stripe Header__nav-toggle-stripe--1"></span>
                         <span className="Header__nav-toggle-stripe Header__nav-toggle-stripe--2"></span>
                         <span className="Header__nav-toggle-stripe Header__nav-toggle-stripe--3"></span>

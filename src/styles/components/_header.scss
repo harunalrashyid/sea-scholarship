@@ -50,6 +50,10 @@
 
 @media (max-width: $sm) {
     .Header {
+        &__logo-link {
+            display: flex;
+        }
+
         &__nav {
             position: fixed;
             top: 0;
@@ -71,7 +75,7 @@
             right: 20px;
         }
 
-        .Header__nav-toggle-stripe {
+        &__nav-toggle-stripe {
             height: 1px;
             background: $primary;
             width: 25px;
@@ -79,11 +83,11 @@
             position: relative;
         }
         
-        .Header__nav-toggle-stripe--1 {
+        &__nav-toggle-stripe--1 {
             top: -7px;
         }
         
-        .Header__nav-toggle-stripe--3 {
+        &__nav-toggle-stripe--3 {
             bottom: -7px;
         }
     }

@@ -291,6 +291,10 @@
     }
 
     .Form {
+        &__row {
+            min-height: 400px;
+        }
+
         &__heading {
             font-size: 2rem;
         }
