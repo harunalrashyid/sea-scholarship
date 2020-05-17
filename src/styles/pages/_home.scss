@@ -250,6 +250,23 @@
         margin: auto;
     }
 
+    // write separate will combine in production
+    &__list ul {
+        list-style: none;
+        padding-left: 1.5rem;
+    }
+    
+    &__list li {
+        position: relative;
+        margin-bottom: .85rem;
+    }
+    
+    &__list li:before {
+        content: '-';
+        position: absolute;
+        left: -1rem;
+    }
+
     &__list strong {
         font-family: 'Avenir-Black';
     }

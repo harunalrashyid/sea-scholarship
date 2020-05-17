@@ -5,7 +5,7 @@ import "flickity/css/flickity.css";
 import { isFirstRender } from '../../shared/helpers/frontend'
 
 class Partners extends Component {
-    componentWillMount() {
+    componentDidMount() {
         const { fetchPartners, fetchPartnersMajor } = this.props
         fetchPartners()
         fetchPartnersMajor()

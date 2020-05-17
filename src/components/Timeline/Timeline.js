@@ -7,7 +7,7 @@ import imgTimeline3 from '../../shared/images/Timeline-3.png'
 import imgTimeline4 from '../../shared/images/Timeline-4.png'
 
 class Timeline extends Component {
-    componentWillMount() {
+    componentDidMount() {
         const { fetchPrograms } = this.props
         fetchPrograms()
     }

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { isFirstRender } from '../../shared/helpers/frontend'
 
 class Faqs extends Component {
-    componentWillMount() {
+    componentDidMount() {
         const { fetchPrograms } = this.props
         fetchPrograms()
     }

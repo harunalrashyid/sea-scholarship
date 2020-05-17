@@ -5,7 +5,7 @@ import "flickity/css/flickity.css";
 import { isFirstRender } from '../../shared/helpers/frontend'
 
 class Testimonials extends Component {
-    componentWillMount() {
+    componentDidMount() {
         const { fetchTestimonials } = this.props
         fetchTestimonials()
     }

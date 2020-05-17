@@ -5,7 +5,7 @@ import imgFreshman from '../../shared/images/icon-freshmen.png'
 import imgSenior from '../../shared/images/icon-senior.png'
 
 class Programs extends Component {
-    componentWillMount() {
+    componentDidMount() {
         const { fetchPrograms } = this.props
         fetchPrograms()
     }
