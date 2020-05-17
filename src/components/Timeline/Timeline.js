@@ -8,14 +8,14 @@ import imgTimeline4 from '../../shared/images/Timeline-4.png'
 
 class Timeline extends Component {
     componentDidMount() {
-        const { fetchPrograms } = this.props
-        fetchPrograms()
+        const { fetchAllWebContent } = this.props
+        fetchAllWebContent()
     }
 
     render() {
-        const { programs: { programs } } = this.props
+        const { allWebContent: { allWebContent } } = this.props
 
-        if (isFirstRender(programs)) {
+        if (isFirstRender(allWebContent)) {
             return null
         }
 
@@ -32,7 +32,7 @@ class Timeline extends Component {
                                 <div className="Timeline__img">
                                     <img src={ imgTimeline1 } alt="Timeline Registration"/>
                                 </div>
-                                <p className="Timeline__date">{programs.data[0].date_regis}</p>
+                                <p className="Timeline__date">{allWebContent.data[0].date_regis}</p>
                             </div>
                         </div>
                         <div className="Timeline__item col-md-3">
@@ -41,7 +41,7 @@ class Timeline extends Component {
                                 <div className="Timeline__img">
                                     <img src={ imgTimeline2 } alt="Timeline Essay and CV Screening"/>
                                 </div>
-                                <p className="Timeline__date">{programs.data[0].date_esay_cvscreen}</p>
+                                <p className="Timeline__date">{allWebContent.data[0].date_esay_cvscreen}</p>
                             </div>
                         </div>
                         <div className="Timeline__item col-md-3">
@@ -50,7 +50,7 @@ class Timeline extends Component {
                                 <div className="Timeline__img">
                                     <img src={ imgTimeline3 } alt="Timeline On-campus Interview"/>
                                 </div>
-                                <p className="Timeline__date">{programs.data[0].date_interview}</p>
+                                <p className="Timeline__date">{allWebContent.data[0].date_interview}</p>
                             </div>
                         </div>
                         <div className="Timeline__item col-md-3">
@@ -59,7 +59,7 @@ class Timeline extends Component {
                                 <div className="Timeline__img Timeline__img--last">
                                     <img src={ imgTimeline4 } alt="Timeline Announcement of Selected Scholar"/>
                                 </div>
-                                <p className="Timeline__date">{programs.data[0].date_announce}</p>
+                                <p className="Timeline__date">{allWebContent.data[0].date_announce}</p>
                             </div>
                         </div>
                     </div>

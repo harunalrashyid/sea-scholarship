@@ -3,14 +3,14 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
 import Timeline from './Timeline'
-import { fetchPrograms } from '../../shared/actions/programsAction'
+import { fetchAllWebContent } from '../../shared/actions/allWebContentAction'
 
-const mapStateToProps = ({ programs }) => ({
-    programs
+const mapStateToProps = ({ allWebContent }) => ({
+    allWebContent
 })
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-    fetchPrograms
+    fetchAllWebContent
 }, dispatch)
 
 export default connect(

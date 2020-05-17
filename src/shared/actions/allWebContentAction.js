@@ -1,15 +1,15 @@
 import axios from 'axios'
 
 import {
-    FETCH_PROGRAMS_REQUEST,
-    FETCH_PROGRAMS_SUCCESS,
-    FETCH_PROGRAMS_ERROR
+    FETCH_ALL_WEB_CONTENT_REQUEST,
+    FETCH_ALL_WEB_CONTENT_SUCCESS,
+    FETCH_ALL_WEB_CONTENT_ERROR
 } from './typesAction'
 
 import { request, received, error } from './baseAction'
 
-export const fetchPrograms = () => dispatch => {
-    dispatch(request(FETCH_PROGRAMS_REQUEST))
+export const fetchAllWebContent = () => dispatch => {
+    dispatch(request(FETCH_ALL_WEB_CONTENT_REQUEST))
 
     const AxiosData = {
         method: 'GET',
@@ -21,9 +21,9 @@ export const fetchPrograms = () => dispatch => {
     }
 
     return axios(AxiosData)
-     .then(response => dispatch(received(FETCH_PROGRAMS_SUCCESS, response.data)))
+     .then(response => dispatch(received(FETCH_ALL_WEB_CONTENT_SUCCESS, response.data)))
      .catch(err => {
          console.log('AXIOS ERROR', err.response)
-         dispatch(error(FETCH_PROGRAMS_ERROR))
+         dispatch(error(FETCH_ALL_WEB_CONTENT_ERROR))
      })
 }

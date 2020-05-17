@@ -6,14 +6,14 @@ import imgSenior from '../../shared/images/icon-senior.png'
 
 class Programs extends Component {
     componentDidMount() {
-        const { fetchPrograms } = this.props
-        fetchPrograms()
+        const { fetchAllWebContent } = this.props
+        fetchAllWebContent()
     }
 
     render() {
-        const { programs: { programs } } = this.props
+        const { allWebContent: { allWebContent } } = this.props
 
-        if (isFirstRender(programs)) {
+        if (isFirstRender(allWebContent)) {
             return null
         }
 
@@ -23,9 +23,9 @@ class Programs extends Component {
                     <div className="row">
                         <div className="col-md-12">
                             <h1 className="Programs__title">Undergraduate Scholarship Program</h1>
-                            <p className="Programs__content">{programs.data[0].program_content}</p>
+                            <p className="Programs__content">{allWebContent.data[0].program_content}</p>
                             {/*
-                            {programs.data.map((program, key) => (
+                            {allWebContent.data.map((program, key) => (
                                 <p className="Programs__content" key={key}>{program.program_content}</p>
                             ))}
                             */}
@@ -38,7 +38,7 @@ class Programs extends Component {
                                 <h3 className="Programs__item-title">Sea Freshman Scholarship Program</h3>
                                 <div 
                                 className="Programs__item-content" 
-                                dangerouslySetInnerHTML={{ __html: programs.data[0].freshman_program }}
+                                dangerouslySetInnerHTML={{ __html: allWebContent.data[0].freshman_program }}
                                 />
                             </div>
                         </div>
@@ -50,7 +50,7 @@ class Programs extends Component {
                                 <h3 className="Programs__item-title">Sea Senior Scholarship Program</h3>
                                 <div 
                                 className="Programs__item-content" 
-                                dangerouslySetInnerHTML={{ __html: programs.data[0].senior_program }}
+                                dangerouslySetInnerHTML={{ __html: allWebContent.data[0].senior_program }}
                                 />
                             </div>
                         </div>

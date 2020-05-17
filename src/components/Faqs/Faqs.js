@@ -3,14 +3,14 @@ import { isFirstRender } from '../../shared/helpers/frontend'
 
 class Faqs extends Component {
     componentDidMount() {
-        const { fetchPrograms } = this.props
-        fetchPrograms()
+        const { fetchAllWebContent } = this.props
+        fetchAllWebContent()
     }
 
     render() {
-        const { programs: { programs } } = this.props
+        const { allWebContent: { allWebContent } } = this.props
 
-        if (isFirstRender(programs)) {
+        if (isFirstRender(allWebContent)) {
             return null
         }
 
@@ -23,7 +23,7 @@ class Faqs extends Component {
                     </div>
                         <div 
                          className="Faqs__list col-md-8" 
-                         dangerouslySetInnerHTML={{ __html: programs.data[0].faq_content }} 
+                         dangerouslySetInnerHTML={{ __html: allWebContent.data[0].faq_content }} 
                         />
                     </div>
                 </div>

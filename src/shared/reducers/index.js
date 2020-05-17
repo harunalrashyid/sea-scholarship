@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux'
 
-import programs from './programsReducer'
+import allWebContent from './allWebContentReducer'
 import partners from './partnersReducer'
 import partnerMajors from './partnersMajorReducer'
 import testimonials from './testimonialsReducer'
 
 const rootReducer = combineReducers({
-    programs,
+    allWebContent,
     partners,
     partnerMajors,
     testimonials
